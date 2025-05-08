@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "allowSyntheticDefaultImports": true, // Esta es la clave para usar JSX en React 17 o superior
+      "target": "es6",  // Opcional: Especifica el nivel de JavaScript de salida
+      "lib": ["dom", "esnext"],  // Incluir las bibliotecas necesarias para el DOM y las últimas características de JS
+      "moduleResolution": "node", // Método de resolución de módulos compatible con Node.js
+      "allowJs": true,  // Permite la compilación de archivos JS
+      "strict": true,  // Habilita las comprobaciones estrictas de tipos (opcional, pero recomendado)
+      "skipLibCheck": true // Ignora la comprobación de tipos en archivos de biblioteca (opcional)
+    },
+    "include": ["src"],  // Incluir todos los archivos dentro de la carpeta src
+    "exclude": ["node_modules"]  // Excluir la carpeta node_modules
+  }
+  
