@@ -46,6 +46,5 @@ const styles = {
 
 // Agrega hover dinámico (JSX no permite :hover en inline styles, así que es mejor con CSS real o una librería)
 export default Header;
-
-
+﻿
  

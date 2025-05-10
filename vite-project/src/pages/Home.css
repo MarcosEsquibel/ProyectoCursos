@@ -1,0 +1,77 @@
+/* Home.css */
+
+/* Contenedor principal de la página */
+.home-container {
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Botón de hamburguesa */
+.hamburger {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 30px;
+  background: transparent; /* Elimina el fondo gris */
+  border: none;
+  color: white;
+  cursor: pointer;
+  z-index: 10; /* Asegura que esté por encima del contenido */
+  padding: 0; /* Elimina cualquier padding extra */
+}
+
+/* Menú de navegación */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  padding-top: 60px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  transform: translateX(-250px); /* Está oculto por defecto */
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Cuando el menú está abierto, moverlo a la izquierda */
+.home-container .sidebar {
+  transform: translateX(0); /* El menú se despliega */
+}
+
+/* Efecto hover para los enlaces del menú */
+.sidebar a:hover {
+  background-color: #f39c12;
+  color: white;
+}
+
+/* Contenido principal */
+.main-content {
+  flex-grow: 1;
+  margin-left: 0; /* Deja espacio para el menú */
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+/* Estilos para la cabecera */
