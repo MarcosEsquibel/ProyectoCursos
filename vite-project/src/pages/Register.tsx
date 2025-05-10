@@ -1,7 +1,7 @@
 // src/pages/register/Register.tsx
-import { useState } from "react";
+import React, { useState } from "react";
 import { register } from "../pages/services/auth.service";
-
+import "./Register.css";
 
 export default function Register() {
   const [name, setName] = useState("");

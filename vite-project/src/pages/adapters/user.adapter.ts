@@ -1,3 +1,4 @@
+
 export function userAdapter (user:any, external:boolean){
     if (external){
         return {

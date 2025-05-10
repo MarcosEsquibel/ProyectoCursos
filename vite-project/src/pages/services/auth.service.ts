@@ -1,4 +1,5 @@
 // src/services/auth.service.ts
+
 import { userAdapter } from "../adapters/user.adapter";
 
 export async function login(email: string, password: string) {

@@ -1,12 +1,17 @@
 // src/pages/login/Login.tsx
-import { useState } from "react";
+import React, { useState } from "react";
 import { login } from "../pages/services/auth.service";
-import * as React from "react";
+import "./Login.css";
+
+
+
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();

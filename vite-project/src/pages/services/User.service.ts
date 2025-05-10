@@ -1,3 +1,4 @@
+
 import { userAdapter } from "../adapters/user.adapter"
 
 export async function getUser() {
