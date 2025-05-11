@@ -1,49 +1,20 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import "./Home.css"; // Asegúrate de tener este archivo de estilos
+// pages/Home.tsx
+import React from "react";
+import "./Home.css";
 
 const Home: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  // Toggle del estado del menú (abrir/cerrar)
-  const toggleMenu = () => setMenuOpen(!menuOpen);
-
   return (
-    <div className="home-container">
-      {/* Menú de navegación */}
-      <nav className="sidebar">
-        <button
-          className="hamburger"
-          onClick={toggleMenu}
-          aria-label="Abrir menú"
-        >
-          ☰
-        </button>
-
-        {/* Menú que solo se muestra cuando `menuOpen` es true */}
-        {menuOpen && (
-          <ul>
-            <li><Link to="/" className="link">Inicio</Link></li>
-            <li><Link to="/talleres" className="link">Talleres</Link></li>
-            <li><Link to="/cursos" className="link">Cursos</Link></li>
-            <li><Link to="/formaciones" className="link">Formaciones</Link></li>
-            <li><Link to="/colabora" className="link">Colabora</Link></li>
-            <li><Link to="/sobre" className="link">Sobre mí / Proyecto</Link></li>
-            <li><Link to="/blog" className="link">Blog / Recursos gratuitos</Link></li>
-            <li><Link to="/soporte" className="link">Soporte</Link></li>
-          </ul>
-        )}
-      </nav>
-
-      {/* Contenido principal */}
-      <main className="main-content">
-       
-        {/* Bienvenida */}
-        <div className="welcome">
-          <h2>Bienvenidos</h2>
-          <p>¡Explora nuestros productos y mucho más!</p>
+    <div className="home-content">
+      <h2>Continúa justo donde lo dejaste</h2>
+      <button className="continue-btn">Continuar aprendizaje</button>
+      <p>REACTJS Clase 07 - useEffect y ciclos de vida</p>
+      <div className="card">
+        <h3>Máster en Desarrollo Web Full Stack</h3>
+        <div className="progress-bar">
+          <div className="progress" style={{ width: "42%" }}></div>
         </div>
-      </main>
+        <p>42% completado</p>
+      </div>
     </div>
   );
 };
