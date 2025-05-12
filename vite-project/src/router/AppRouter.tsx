@@ -7,7 +7,9 @@ import Register from "../pages/Register";
    function AppRouter() {
   return (
     <Router>
-      <Header />
+      <Header toggleMenu={function (): void {
+        throw new Error("Function not implemented.");
+      } } />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
