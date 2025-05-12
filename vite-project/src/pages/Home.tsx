@@ -1,6 +1,8 @@
 import React from "react";
+import { MdAssignment, MdLibraryBooks, MdSchool } from "react-icons/md";
 import "./Home.css";
 import { Link } from "react-router-dom";
+
 
 const Home: React.FC = () => {
   return (
@@ -32,7 +34,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Qué es NoimaLab */}
+      {/* Qu茅 es NoimaLab */}
       <section className="about-section">
         <h2>Qué es NoimaLab</h2>
         <p>
@@ -42,27 +44,28 @@ const Home: React.FC = () => {
         <img src="/ruta/ilustracion.png" alt="Ilustración" />
       </section>
 
-      {/* Explora según necesidad */}
-      <section className="explore-section">
-        <h2>Explora según tu necesidad</h2>
-        <div className="explore-options">
-          <div className="option">
-            <span>📄</span>
-            <h4>Talleres cortos</h4>
-            <Link to="/talleres">Ver talleres</Link>
-          </div>
-          <div className="option">
-            <span>📘</span>
-            <h4>Cursos para profundizar</h4>
-            <Link to="/cursos">Ver cursos</Link>
-          </div>
-          <div className="option">
-            <span>📚</span>
-            <h4>Formaciones completas</h4>
-            <Link to="/formaciones">Ver formaciones</Link>
-          </div>
-        </div>
-      </section>
+<section className="explore-section">
+  <h2>Explora según tu necesidad</h2>
+  <div className="explore-options">
+<div className="option">
+  <MdAssignment size={32} color="#fa8072" />
+  <h4>Talleres cortos</h4>
+  <Link to="/talleres">Ver talleres</Link>
+</div>
+
+<div className="option">
+  <MdLibraryBooks size={32} color="#fa8072" />
+  <h4>Cursos para profundizar</h4>
+  <Link to="/cursos">Ver cursos</Link>
+</div>
+
+<div className="option">
+  <MdSchool size={32} color="#fa8072" />
+  <h4>Formaciones completas</h4>
+  <Link to="/formaciones">Ver formaciones</Link>
+</div>
+  </div>
+</section>
     </div>
   );
 };
