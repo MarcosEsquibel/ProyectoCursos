@@ -88,7 +88,7 @@
   position: relative;
 }
 
-.access-button {
+.access-button  {
   background-color: #fff0e0;
   color: #fa8072;
   padding: 0.5rem 1rem;
@@ -97,6 +97,7 @@
   cursor: pointer;
   font-weight: 600;
 }
+ 
 
 .access-dropdown {
   position: absolute;
@@ -172,20 +173,5 @@
 
   .hamburger {
     align-self: flex-start;
-  }
-
-  /* Si el usuario no está autenticado, mostramos la hamburguesa para el acceso al usuario */
-  .hamburger.user-auth {
-    display: none; /* No se muestra la hamburguesa de usuario */
-  }
-
-  /* Mostrar la hamburguesa de usuario si el usuario está autenticado */
-  .hamburger.user-access {
-    display: block;
-    font-size: 1.8rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #fa8072;
   }
 }
