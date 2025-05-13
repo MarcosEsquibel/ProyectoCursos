@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./pages/components/Header";
-import Sidebar from "./pages/components/Sidebar";
 import Home from "./pages/Home";
 import Login from "./pages/Login"; // Importamos Login
 import Register from "./pages/Register"; // Importamos Register
@@ -21,7 +20,6 @@ const App: React.FC = () => {
     <Router>
       <div className="app-container">
         <Header toggleMenu={toggleMenu} />
-        <Sidebar menuOpen={menuOpen} />
         <main className="main-content">
           
           <Routes>

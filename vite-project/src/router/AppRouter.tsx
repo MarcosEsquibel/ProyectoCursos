@@ -5,7 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Talleres from "../pages/Talleres";
 import Cursos from "../pages/Cursos";
-import Formaciones from "../pages/Formaciones";
+import Formaciones from "../pages/Formaciones"
 
 
    function AppRouter() {

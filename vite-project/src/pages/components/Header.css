@@ -76,17 +76,7 @@
   transform-origin: left;
 }
 
-.hamburger {
-  font-size: 1.8rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #fa8072;
-}
 
-.user-access {
-  position: relative;
-}
 
 .access-button  {
   background-color: #fff0e0;
