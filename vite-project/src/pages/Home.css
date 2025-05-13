@@ -10,6 +10,7 @@
 
 /* Sección de "Qué es NoimaLab" */
 .about-section {
+  margin: 40px;
   padding: 2rem;
   text-align: center;
 }
