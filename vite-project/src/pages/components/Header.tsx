@@ -1,26 +1,30 @@
+// components/Header.tsx
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-interface HeaderProps {
-  toggleMenu: () => void;
-}
-
-const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
+const Header: React.FC = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <header className="header">
-      <button className="hamburger" onClick={toggleMenu}>
-        ☰
-      </button>
+      {/* Logo y sub-logo */}
+      <div className="logo-container">
+        <h1 className="logo">NoimaLab</h1>
+        <p className="sub-logo">by Kavurey Group</p>
+      </div>
 
-      {/* Logo como enlace al inicio */}
-      <Link to="/" className="logo">
-        Kavurey Group - Plataforma de Formaciones Online
-      </Link>
+      {/* Menú de navegación */}
+      <nav className="header-nav">
+        <ul>
+          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/talleres">Talleres</Link></li>
+          <li><Link to="/cursos">Cursos</Link></li>
+          <li><Link to="/formaciones">Formaciones</Link></li>
+        </ul>
+      </nav>
 
-      {/* Menú de acceso al usuario */}
+      {/* Acceso al usuario */}
       <div
         className="user-access"
         onMouseEnter={() => setDropdownOpen(true)}

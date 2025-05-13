@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;600&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fffdf8; /* fondo claro */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.formaciones-content {
+  padding-top: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Hero */
+.hero-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  color: #fa8072; /* salmón pastel */
+  font-weight: 600;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #5a5a5a;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* Explore Section */
+.explore-section {
+  margin-top: 50px;
+}
+
+.explore-section h2 {
+  font-size: 2rem;
+  color: #d45d5d;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.explore-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Cards */
+.option-card {
+  background-color: #fff0e0;
+  border: 1px solid #fa8072;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  width: 260px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.option-card:hover {
+  transform: translateY(-5px);
+}
+
+.option-card h4 {
+  color: #fa8072;
+  font-size: 1.3rem;
+  margin: 15px 0 10px 0;
+}
+
+.option-card p {
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+
+.option-card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #d45d5d;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.option-card a:hover {
+  border-color: #fa8072;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .explore-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-card {
+    width: 90%;
+  }
+}
+

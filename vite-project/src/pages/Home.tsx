@@ -1,73 +1,65 @@
 import React from "react";
 import { MdAssignment, MdLibraryBooks, MdSchool } from "react-icons/md";
-import "./Home.css";
 import { Link } from "react-router-dom";
-
+import "./Home.css";
 
 const Home: React.FC = () => {
   return (
     <div className="home-content">
-      {/* Hero Section */}
-      <section className="hero-section">
-        <h1 className="hero-title">
-          Formaciones a tu ritmo<br />para quienes quieren transformar desde dentro.
-        </h1>
-        <Link to="/formaciones" className="hero-button">Ver formaciones</Link>
-      </section>
 
-      {/* Cursos destacados */}
-      <section className="courses-section">
-        <div className="course-card">
-          <img src="/ruta/imagen1.jpg" alt="Curso de Regulación Emocional" />
-          <h3>Curso de Regulación Emocional</h3>
-          <Link to="/cursos/regulacion" className="card-btn">Ver más</Link>
-        </div>
-        <div className="course-card">
-          <img src="/ruta/imagen2.jpg" alt="Taller de Mindfulness" />
-          <h3>Taller de Mindfulness</h3>
-          <Link to="/talleres/mindfulness" className="card-btn">Ver más</Link>
-        </div>
-        <div className="course-card">
-          <img src="/ruta/imagen3.jpg" alt="Formación en Psicología Positiva" />
-          <h3>Formación en Psicología Positiva</h3>
-          <Link to="/formaciones/psicologia-positiva" className="card-btn">Ver más</Link>
-        </div>
-      </section>
-
-      {/* Qu茅 es NoimaLab */}
+      {/* Qué es NoimaLab - Sección inicial */}
       <section className="about-section">
-        <h2>Qué es NoimaLab</h2>
+        <h2>¿Qué es NoimaLab?</h2>
         <p>
-          NoimaLab es un espacio online de formación emocional, psicológica y vivencial.
-          <br />Sin tutorías. Sin horarios. Solo tú, tus procesos y tu tiempo.
+          NoimaLab es un espacio online para quienes quieren transformar su vida desde dentro. Aquí te formas emocional, psicológica y vivencialmente, sin horarios ni tutorías. Tú marcas el ritmo, tú eliges el camino.
         </p>
-        <img src="/ruta/ilustracion.png" alt="Ilustración" />
+        <img src="/ruta/ilustracion.png" alt="Ilustración de crecimiento personal" />
       </section>
 
-<section className="explore-section">
-  <h2>Explora según tu necesidad</h2>
-  <div className="explore-options">
-<div className="option">
-  <MdAssignment size={32} color="#fa8072" />
-  <h4>Talleres cortos</h4>
-  <Link to="/talleres">Ver talleres</Link>
-</div>
+   
+      {/* Explora sección */}
+      <section className="explore-section">
+        <h2>Explora según tu necesidad</h2>
+        <div className="explore-options">
+          <div className="option-card">
+            <MdAssignment size={40} color="#fa8072" />
+            <h4>Talleres breves</h4>
+            <p>Acciones concretas para necesidades inmediatas.</p>
+            <Link to="/talleres">Ver talleres</Link>
+          </div>
+          <div className="option-card">
+            <MdLibraryBooks size={40} color="#fa8072" />
+            <h4>Cursos para profundizar</h4>
+            <p>Aprende y aplica con base teórica y ejercicios prácticos.</p>
+            <Link to="/cursos">Ver cursos</Link>
+          </div>
+          <div className="option-card">
+            <MdSchool size={40} color="#fa8072" />
+            <h4>Formaciones completas</h4>
+            <p>Programas diseñados para transformar de raíz.</p>
+            <Link to="/formaciones">Ver formaciones</Link>
+          </div>
+        </div>
+      </section>
 
-<div className="option">
-  <MdLibraryBooks size={32} color="#fa8072" />
-  <h4>Cursos para profundizar</h4>
-  <Link to="/cursos">Ver cursos</Link>
-</div>
+      
 
-<div className="option">
-  <MdSchool size={32} color="#fa8072" />
-  <h4>Formaciones completas</h4>
-  <Link to="/formaciones">Ver formaciones</Link>
-</div>
-  </div>
-</section>
+      {/* Frase final inspiradora */}
+      <section className="closing-phrase">
+        <h3 style={{ textAlign: "center", marginTop: "3rem", color: "#333" }}>
+          'Entender nuestro interior no es opcional, es esencial'
+        </h3>
+      </section>
+
+      {/* Footer */}
+      <footer>
+        <p>Únete a NoimaLab y empieza tu propio camino </p>
+        <Link to="/empezar" className="hero-button">Empezar ahora</Link>
+      </footer>
     </div>
   );
 };
 
 export default Home;
+
+        

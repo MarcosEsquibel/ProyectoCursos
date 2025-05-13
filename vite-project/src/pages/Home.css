@@ -1,125 +1,49 @@
-/* Fondo general pastel */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Estilos generales */
 .home-content {
-  background-color: #fef8f3; /* amarillo claro pastel */
-  padding: 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   color: #333;
+  background-color: #fff;
 }
 
-/* HERO SECTION */
-.hero-section {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.hero-title {
-  font-size: clamp(1.8rem, 4vw, 2.8rem);
-  color: #1f2a44;
-  font-weight: 600;
-  margin-bottom: 1rem;
-  line-height: 1.4;
-}
-
-.hero-button {
-  background-color: #fa8072;
-  color: white;
-  border: none;
-  padding: 0.7rem 1.5rem;
-  font-weight: 600;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.hero-button:hover {
-  background-color: #d45d5d;
-}
-
-/* CARDS DE CURSOS */
-.courses-section {
-  display: flex;
-  gap: 2rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-
-.course-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  width: 260px;
-  padding: 1rem;
-  text-align: center;
-  transition: transform 0.2s ease;
-}
-
-.course-card:hover {
-  transform: translateY(-5px);
-}
-
-.course-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 1rem;
-}
-
-.course-card h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.8rem;
-  color: #1f2a44;
-}
-
-.card-btn {
-  background-color: #fff0e0;
-  color: #fa8072;
-  padding: 0.4rem 1rem;
-  border: 1px solid #fa8072;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.card-btn:hover {
-  background-color: #ffe4e1;
-}
-
-/* ABOUT SECTION */
+/* Sección de "Qué es NoimaLab" */
 .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 2rem;
-  background-color: #fff7f1;
   padding: 2rem;
-  border-radius: 12px;
-  margin-bottom: 4rem;
+  text-align: center;
 }
 
 .about-section h2 {
-  font-size: 1.8rem;
-  color: #1f2a44;
+  font-size: 2.5rem;
+  color: #fa8072; /* Salmón pastel */
 }
 
 .about-section p {
-  font-size: 1rem;
-  max-width: 500px;
-  line-height: 1.6;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about-section img {
-  max-width: 180px;
+  max-width: 100%;
+  height: auto;
+  margin-top: 2rem;
 }
 
-/* EXPLORA OPCIONES */
-.explore-section h2 {
+/* Sección Explora */
+.explore-section {
+  padding: 3rem 2rem;
+  background-color: #79c3bfbc;
   text-align: center;
-  font-size: 1.6rem;
-  margin-bottom: 2rem;
-  color: #1f2a44;
+}
+
+.explore-section h2 {
+  font-size: 2.5rem;
+  color: #333;
 }
 
 .explore-options {
@@ -127,35 +51,106 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
-.option {
-  background-color: white;
-  border: 1px solid #ffe4e1;
-  border-radius: 12px;
-  padding: 1rem;
-  width: 200px;
+.option-card {
+  background-color: #79c3bfbc;
+  border: 2px solid #79c3bfbc;
+  padding: 2rem;
+  border-radius: 10px;
   text-align: center;
+  max-width: 280px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.option span {
-  font-size: 2rem;
-  display: block;
-  margin-bottom: 0.5rem;
+.option-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
-.option h4 {
-  margin-bottom: 0.5rem;
+.option-card h4 {
+  font-size: 1.6rem;
   color: #333;
+  margin-top: 1rem;
 }
 
-.option a {
+.option-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 0.8rem;
+}
+
+.option-card a {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #79c3bfbc; /* Turquesa suave */
   text-decoration: none;
-  color: #fa8072;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
-.option a:hover {
-  text-decoration: underline;
+.option-card a:hover {
+  color: #fa8072; /* Salmón pastel */
+}
+
+/* Frase final inspiradora */
+.closing-phrase {
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+}
+
+.closing-phrase h3 {
+  font-size: 2rem;
+  color: #fa8072; /* Salmón pastel igual que los h2 */
+  font-style: italic;
+  font-family: 'Pacifico', cursive; /* Estilo lettering */
+  letter-spacing: 1px;
+  margin: 0 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #fa8072; /* Salmón pastel */
+  padding: 3rem 2rem;
+  text-align: center;
+  margin-top: auto;
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+footer .hero-button {
+  background-color:#fdfdfd;
+  color: #fa8072;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 2px solid #fa8072;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+footer .hero-button:hover {
+  background-color: #fa8072;
+  color: #fff;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .explore-options {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .option-card {
+    width: 90%;
+  }
 }

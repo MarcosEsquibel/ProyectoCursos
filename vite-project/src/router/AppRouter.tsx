@@ -3,6 +3,10 @@ import Header from "../pages/components/Header";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import Talleres from "../pages/Talleres";
+import Cursos from "../pages/Cursos";
+import Formaciones from "../pages/Formaciones";
+
 
    function AppRouter() {
   return (
@@ -14,6 +18,10 @@ import Register from "../pages/Register";
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/talleres" element={<Talleres />} />
+        <Route path="/cursos" element={<Cursos />} />
+        <Route path="/formaciones" element={<Formaciones />} />
+
       </Routes>
     </Router>
   );
