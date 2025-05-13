@@ -2,7 +2,7 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 400px;
-  margin: 40px auto;
+  margin: 80px auto;
   padding: 20px;
   background-color: white;
   border-radius: 12px;
@@ -24,13 +24,13 @@ input {
 }
 
 input:focus {
-  border-color: #007bff;
+  border-color: #fa8072;
   outline: none;
 }
 
 button {
   padding: 10px;
-  background-color: #007bff;
+  background-color: #fa8072;
   color: white;
   border: none;
   font-size: 16px;

@@ -1,5 +1,5 @@
 // Header.tsx
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
@@ -8,8 +8,6 @@ type HeaderProps = {
 };
 
 const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-
   return (
     <header className="header">
       {/* Logo */}
@@ -28,19 +26,11 @@ const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
         </ul>
       </nav>
 
-      {/* Acceso al usuario */}
-      <div
-        className="user-access"
-        onMouseEnter={() => setDropdownOpen(true)}
-        onMouseLeave={() => setDropdownOpen(false)}
-      >
-        <button className="access-button">Acceso al usuario ▾</button>
-        {dropdownOpen && (
-          <div className="access-dropdown">
-            <Link to="/login" onClick={() => setDropdownOpen(false)}>Iniciar sesión</Link>
-            <Link to="/register" onClick={() => setDropdownOpen(false)}>Registrarse</Link>
-          </div>
-        )}
+      {/* Acceso directo a login */}
+      <div className="user-access">
+        <Link to="/login" className="access-button">
+          Iniciar sesión
+        </Link>
       </div>
     </header>
   );

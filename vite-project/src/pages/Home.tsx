@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 const Home: React.FC = () => {
+  function setDropdownOpen(arg0: boolean): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div className="home-content">
 
@@ -54,7 +58,8 @@ const Home: React.FC = () => {
       {/* Footer */}
       <footer>
         <p>Únete a NoimaLab y empieza tu propio camino </p>
-        <Link to="/empezar" className="hero-button">Empezar ahora</Link>
+        <Link to="/register" className="hero-button">Empezar ahora</Link>
+         
       </footer>
     </div>
   );
