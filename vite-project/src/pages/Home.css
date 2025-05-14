@@ -8,44 +8,50 @@
   background-color: #fff;
 }
 
-/* Sección de "Qué es NoimaLab" */
-.about-section {
-  margin: 40px;
-  padding: 2rem;
-  text-align: center;
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
 }
 
+.about-content p {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 500px;
+  text-align: left;
+}
+
+
+.about-image {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
 .about-section h2 {
   font-size: 2.5rem;
   color: #fa8072; /* Salmón pastel */
+  text-align: center;
+  margin-top: 40px;
 }
 
-.about-section p {
-  font-size: 1.2rem;
-  color: #555;
-  margin-top: 1rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.about-section img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 2rem;
-}
 
 /* Sección Explora */
 .explore-section {
   padding: 3rem 2rem;
-  background-color: #79c3bfbc;
+  background-color: #2f4e6d;
   text-align: center;
 }
 
 .explore-section h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: #fff !important;
 }
+
 
 .explore-options {
   display: flex;

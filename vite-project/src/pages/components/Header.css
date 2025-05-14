@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fdfbf6; /* crema mate */
+  background-color:#fdf7d6;/* crema mate */
   padding: 1rem 2rem;
   flex-wrap: wrap;
 }
@@ -122,7 +122,7 @@ button :hover{
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    gap: 1rem;
+    gap: 1rem;  
     text-align: center;
   }
 
