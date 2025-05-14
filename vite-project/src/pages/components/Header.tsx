@@ -1,13 +1,19 @@
 // Header.tsx
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
-type HeaderProps = {
-  toggleMenu: () => void;
-};
+const Header: React.FC = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
 
-const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
+  const closeMenu = () => {
+    setMenuOpen(false);
+  };
+
   return (
     <header className="header">
       {/* Logo */}
@@ -16,19 +22,26 @@ const Header: React.FC<HeaderProps> = ({ toggleMenu }) => {
         <p className="sub-logo">by Kavurey Group</p>
       </div>
 
-      {/* Navegación */}
-      <nav className="header-nav">
+      {/* Botón hamburguesa */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      {/* Menú de navegación */}
+      <nav className={`header-nav ${menuOpen ? "active" : ""}`}>
         <ul>
-          <li><Link to="/">Inicio</Link></li>
-          <li><Link to="/talleres">Talleres</Link></li>
-          <li><Link to="/cursos">Cursos</Link></li>
-          <li><Link to="/formaciones">Formaciones</Link></li>
+          <li><Link to="/" onClick={closeMenu}>Inicio</Link></li>
+          <li><Link to="/talleres" onClick={closeMenu}>Talleres</Link></li>
+          <li><Link to="/cursos" onClick={closeMenu}>Cursos</Link></li>
+          <li><Link to="/formaciones" onClick={closeMenu}>Formaciones</Link></li>
         </ul>
       </nav>
 
-      {/* Acceso directo a login */}
+      {/* Botón acceso */}
       <div className="user-access">
-        <Link to="/login" className="access-button">
+        <Link to="/login" className="access-button" onClick={closeMenu}>
           Iniciar sesión
         </Link>
       </div>

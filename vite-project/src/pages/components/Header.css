@@ -169,3 +169,53 @@ button :hover{
     align-self: flex-start;
   }
 }
+/* --- Menú hamburguesa --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fa8072;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Menú responsive */
+@media (max-width: 768px) {
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    
+    background-color: #fdfbf6;
+    margin-top: 1rem;
+    
+    padding: 1rem 0;
+    border-top: 1px solid #fa8072;
+  }
+
+  .header-nav.active {
+     display: inline-flex;
+  padding: 0.2rem 0.4rem; /* muy poco padding */
+  margin: 0; /* sin márgenes adicionales */
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .hamburger {
+    display:flex;
+  }
+}

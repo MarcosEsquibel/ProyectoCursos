@@ -11,9 +11,7 @@ import Formaciones from "../pages/Formaciones"
    function AppRouter() {
   return (
     <Router>
-      <Header toggleMenu={function (): void {
-        throw new Error("Function not implemented.");
-      } } />
+       
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
