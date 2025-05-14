@@ -218,4 +218,9 @@ button :hover{
   .hamburger {
     display:flex;
   }
+  .logo-img {
+  height: 60px;
+  object-fit: contain;
+}
+
 }

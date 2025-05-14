@@ -2,7 +2,7 @@ import React from "react";
 import { MdPsychology } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./Cursos.css"; // Puedes crear un archivo CSS similar al de Talleres
-
+import Logo from "../assets/images/Logo.png"
 const Cursos: React.FC = () => {
   return (
     <div className="cursos-content">
@@ -20,6 +20,11 @@ const Cursos: React.FC = () => {
       <section className="explore-section">
         <h2>Explora según tu interés</h2>
         <div className="explore-options">
+             <img 
+            src={Logo}
+            alt="Ilustración de NoimaLab"
+            className="about-image"
+          />
           <div className="option-card">
             <MdPsychology size={40} color="#6a5acd" />
             <h4>Cursos de Psicología</h4>
@@ -29,6 +34,8 @@ const Cursos: React.FC = () => {
       </section>
     </div>
   );
+  
 };
+
 
 export default Cursos;

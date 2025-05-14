@@ -3,7 +3,7 @@ import { MdAssignment, MdLibraryBooks, MdSchool } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import psicologiapositiva2 from "../assets/images/psicologiapositiva2.png";
-
+import Logo from "../assets/images/Logo.png"
 const Home: React.FC = () => {
   function setDropdownOpen(arg0: boolean): void {
     throw new Error("Function not implemented.");
@@ -30,6 +30,11 @@ const Home: React.FC = () => {
       <section className="explore-section">
         <h2>Explora según tu necesidad</h2>
         <div className="explore-options">
+            <img 
+            src={Logo}
+            alt="Ilustración de NoimaLab"
+            className="about-image"
+          />
           <div className="option-card">
             <MdAssignment size={40} color="#fa8072" />
             <h4>Talleres breves</h4>
@@ -64,6 +69,7 @@ const Home: React.FC = () => {
         <Link to="/register" className="hero-button">
           Empezar ahora
         </Link>
+        
       </footer>
     </div>
   );
