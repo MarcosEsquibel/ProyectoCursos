@@ -26,7 +26,8 @@ export default function Login() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Iniciar Sesión</h2>
+      
+      <h2 className="Iniciar">Iniciar Sesión</h2>
       <input
         type="email"
         placeholder="Correo electrónico"
