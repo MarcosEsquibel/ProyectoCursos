@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
+
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -17,9 +18,11 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       {/* Logo */}
+      
       <div className="logo-container">
         <h1 className="logo">NoimaLab</h1>
         <p className="sub-logo">by Kavurey Group</p>
+     
       </div>
 
       {/* Botón hamburguesa */}
