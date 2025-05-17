@@ -1,5 +1,5 @@
 import React from "react";
-import { MdPsychology, MdSchool } from "react-icons/md";
+import { MdPsychology } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "./Formaciones.css";
 
@@ -9,29 +9,43 @@ const Formaciones: React.FC = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <h1 className="hero-title">
-          Formaciones completas en psicología transformadora
+          Formaciones que transforman desde dentro
         </h1>
         <p className="hero-subtitle">
-          Recorridos profundos diseñados para quienes quieren comprenderse, sanar y acompañar a otros.
+          Espacios profundos para aprender, sanar y crecer con propósito.
         </p>
       </section>
 
-      {/* Explora Formaciones */}
+      {/* Explora sección */}
       <section className="explore-section">
-        <h2>Elige tu camino de formación</h2>
+        <h2>Explora nuestras Formaciones</h2>
         <div className="explore-options">
           <div className="option-card">
-            <MdPsychology size={40} color="#fa8072" />
-            <h4>Psicología del Bienestar</h4>
-            <p>Una formación integral para cultivar el equilibrio emocional y mental.</p>
-            <Link to="/formaciones/psicologia-bienestar">Ver formación</Link>
+            <MdPsychology size={40} color="#6a5acd" />
+            <h4>Autoconocimiento y Gestión Emocional</h4>
+            <p>"Conócete a ti mism@ y aprende a regular tus emociones con conciencia."</p>
+            <Link to="/formaciones/autoconocimiento">Explorar</Link>
           </div>
 
           <div className="option-card">
-            <MdSchool size={40} color="#fa8072" />
-            <h4>Autoconocimiento profundo</h4>
-            <p>Explora tus patrones, emociones y fortalezas para liderar tu vida con claridad.</p>
-            <Link to="/formaciones/autoconocimiento">Ver formación</Link>
+            <MdPsychology size={40} color="#6a5acd" />
+            <h4>Psicología del Trauma</h4>
+            <p>"Comprende las heridas del pasado para sanar el presente."</p>
+            <Link to="/formaciones/trauma">Explorar</Link>
+          </div>
+
+          <div className="option-card">
+            <MdPsychology size={40} color="#6a5acd" />
+            <h4>Mindfulness y Bienestar</h4>
+            <p>"Encuentra calma y claridad a través del momento presente."</p>
+            <Link to="/formaciones/mindfulness">Explorar</Link>
+          </div>
+
+          <div className="option-card">
+            <MdPsychology size={40} color="#6a5acd" />
+            <h4>Psicología Positiva</h4>
+            <p>"Cultiva fortalezas y crea una vida con más significado."</p>
+            <Link to="/formaciones/positiva">Explorar</Link>
           </div>
         </div>
       </section>
