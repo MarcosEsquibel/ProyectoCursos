@@ -1,5 +1,6 @@
 // src/pages/register/Register.tsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { register } from "../pages/services/auth.service";
 import "./Register.css";
 
@@ -9,6 +10,7 @@ export default function Register() {
   const [password, setPassword] = useState("");
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -17,8 +19,16 @@ export default function Register() {
       console.log("Usuario registrado:", newUser);
       setSuccess("Registro exitoso");
       setError("");
+      
+      // Guardar estado de login en localStorage
+      localStorage.setItem("isLoggedIn", "true");
+
+      // Redirigir a dashboard o página deseada después de registro
+      navigate("/dashboard"); 
+      
     } catch (err) {
       setError("Error al registrar");
+      setSuccess("");
     }
   };
 

@@ -9,8 +9,9 @@ import "./utilities/App.css";
 import Talleres from "./pages/Talleres";
 import Cursos from "./pages/Cursos";
 import Formaciones from "./pages/Formaciones";
-
-
+import ProtectedRoute from "./components/ProtectedRoute";
+import CompraPage from "./pages/Comprapage";
+import PaymentForm from "./features/payments/PaymentForm";
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 

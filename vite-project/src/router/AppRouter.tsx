@@ -6,7 +6,8 @@ import Register from "../pages/Register";
 import Talleres from "../pages/Talleres";
 import Cursos from "../pages/Cursos";
 import Formaciones from "../pages/Formaciones"
-
+import comprapage from "../pages/Comprapage"
+ 
 
    function AppRouter() {
   return (

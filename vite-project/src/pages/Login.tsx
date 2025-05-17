@@ -1,17 +1,14 @@
 // src/pages/login/Login.tsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { login } from "../pages/services/auth.service";
 import "./Login.css";
-
-
-
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-
-
+  const navigate = useNavigate();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -19,6 +16,10 @@ export default function Login() {
       const user = await login(email, password);
       console.log("Logged in:", user);
       setError("");
+      // Guardar estado login en localStorage
+      localStorage.setItem("isLoggedIn", "true");
+      // Redirigir después del login exitoso
+      navigate("/dashboard"); // Cambia esta ruta si quieres otro destino
     } catch (err) {
       setError("Credenciales incorrectas");
     }
@@ -26,7 +27,6 @@ export default function Login() {
 
   return (
     <form onSubmit={handleSubmit}>
-      
       <h2 className="Iniciar">Iniciar Sesión</h2>
       <input
         type="email"
