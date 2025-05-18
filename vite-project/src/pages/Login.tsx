@@ -16,10 +16,12 @@ export default function Login() {
       const user = await login(email, password);
       console.log("Logged in:", user);
       setError("");
-      // Guardar estado login en localStorage
+
+      // Guardar estado de login
       localStorage.setItem("isLoggedIn", "true");
-      // Redirigir después del login exitoso
-      navigate("/dashboard"); // Cambia esta ruta si quieres otro destino
+
+      // Redirigir a la página principal o dashboard
+      navigate("/");
     } catch (err) {
       setError("Credenciales incorrectas");
     }

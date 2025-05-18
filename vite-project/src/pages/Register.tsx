@@ -1,4 +1,3 @@
-// src/pages/register/Register.tsx
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { register } from "../pages/services/auth.service";
@@ -19,16 +18,11 @@ export default function Register() {
       console.log("Usuario registrado:", newUser);
       setSuccess("Registro exitoso");
       setError("");
-      
-      // Guardar estado de login en localStorage
-      localStorage.setItem("isLoggedIn", "true");
 
-      // Redirigir a dashboard o página deseada después de registro
-      navigate("/dashboard"); 
-      
+      // Redirigir al login para que el usuario inicie sesión
+      navigate("/login");
     } catch (err) {
       setError("Error al registrar");
-      setSuccess("");
     }
   };
 

@@ -88,6 +88,24 @@ body {
   border-color: #fa8072;
 }
 
+/* Comprar link estilo botón */
+.option-card .buy-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fa8072;
+  font-weight: bold;
+  text-decoration: none;
+  border: 2px solid #fa8072;
+  border-radius: 6px;
+  padding: 6px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.option-card .buy-link:hover {
+  background-color: #fa8072;
+  color: white;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .explore-options {

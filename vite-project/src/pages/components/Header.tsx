@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
 
-
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [hasPurchased, setHasPurchased] = useState(false);
@@ -23,10 +22,7 @@ const Header: React.FC = () => {
 
   const handleButtonClick = () => {
     closeMenu();
-    if (!hasPurchased) {
-      // No ha comprado → ir a comprar
-      navigate("/comprar");
-    } else if (!isLoggedIn) {
+    if (!isLoggedIn) {
       // Ha comprado pero no está logueado → ir a login
       navigate("/login");
     } else {
@@ -38,7 +34,6 @@ const Header: React.FC = () => {
   };
 
   const getButtonText = () => {
-    if (!hasPurchased) return "Comprar";
     if (!isLoggedIn) return "Iniciar sesión";
     return "Cerrar sesión";
   };
@@ -49,7 +44,6 @@ const Header: React.FC = () => {
       <div className="logo-container">
         <h1 className="logo">NoimaLab</h1>
         <p className="sub-logo">by Kavurey Group</p>
-     
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>
@@ -67,14 +61,16 @@ const Header: React.FC = () => {
         </ul>
       </nav>
 
-      <div className="user-access">
-        <button
-          className="access-button"
-          onClick={handleButtonClick}
-        >
-          {getButtonText()}
-        </button>
-      </div>
+      {hasPurchased && (
+        <div className="user-access">
+          <button
+            className="access-button"
+            onClick={handleButtonClick}
+          >
+            {getButtonText()}
+          </button>
+        </div>
+      )}
     </header>
   );
 };

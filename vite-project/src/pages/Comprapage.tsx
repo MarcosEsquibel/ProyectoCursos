@@ -1,11 +1,26 @@
-// src/pages/CompraPage.tsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const CompraPage: React.FC = () => {
   const [showPaymentForm, setShowPaymentForm] = useState(false);
+  const [isPaying, setIsPaying] = useState(false);
+  const navigate = useNavigate();
 
   const handleStartPurchase = () => {
     setShowPaymentForm(true);
+  };
+
+  const handlePayment = () => {
+    setIsPaying(true);
+
+    // Simula procesamiento del pago
+    setTimeout(() => {
+      // Marcar como comprado
+      localStorage.setItem("hasPurchased", "true");
+
+      // Redirigir al registro
+      navigate("/register");
+    }, 2000); // Simula un "cargando" de 2 segundos
   };
 
   return (
@@ -20,10 +35,20 @@ const CompraPage: React.FC = () => {
         >
           Comprar ahora
         </button>
-      ) : 
-      // Aquí falta cerrar o mostrar algo cuando showPaymentForm es true
-      null
-      }
+      ) : (
+        <div style={{ marginTop: "2rem" }}>
+          <h3>Formulario de pago</h3>
+          <p>Simulación de pago con tarjeta...</p>
+
+          <button
+            onClick={handlePayment}
+            disabled={isPaying}
+            style={{ marginTop: "1rem", padding: "0.5rem 1rem" }}
+          >
+            {isPaying ? "Procesando..." : "Pagar"}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
