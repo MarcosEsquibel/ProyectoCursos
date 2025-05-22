@@ -31,14 +31,13 @@ const App: React.FC = () => {
             <Route path="/talleres" element={<Talleres />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/formaciones" element={<Formaciones />} />
-            
-            
-<Route path="/comprar" element={<CompraPage />} />
+            <Route path="/comprar" element={<CompraPage />} />
 
 
 
           </Routes>
         </main>
+       <Footer/>
       </div>
     </Router>
   );

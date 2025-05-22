@@ -1,36 +1,17 @@
 /* App.css */
-body {
-  background-color: #e7deaf; /* amarillo pastel claro */
+
+html, body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  font-family: sans-serif; /* o el que estés usando */
+  font-family: sans-serif;
+  background-color: #e7deaf; /* amarillo pastel claro */
 }
 
 .app-container {
   display: flex;
-  height: 100vh;
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #1c1c1c;
-  color: white;
-  padding: 20px;
-}
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  margin: 10px 0;
-}
-
-.main-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #f4f4f4;
+  flex-direction: column;
+  min-height: 100vh; /* asegura que el contenedor ocupe al menos toda la pantalla */
 }
 
 .header {
@@ -47,3 +28,25 @@ body {
   z-index: 10;
 }
 
+.main-content {
+  flex: 1; /* empuja el footer hacia el final */
+  padding: 80px 20px 20px; /* top padding extra para evitar que el header fijo tape el contenido */
+  background-color: #f4f4f4;
+}
+
+/* Si usas sidebar en algún layout futuro */
+.sidebar {
+  width: 250px;
+  background-color: #1c1c1c;
+  color: white;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}

@@ -8,23 +8,23 @@ const Footer: React.FC = () => {
     <footer className="noima-footer">
       <div className="footer-content">
         <div className="footer-brand">
-          <h2 className="footer-name">NoimaLab</h2>
-          <p className="footer-tagline">Emotional Culture & Team Dynamics</p>
+               
+                <p>Únete a NoimaLab y empieza tu propio camino: </p>
+                <Link to="/register" className="hero-button">
+                  Empezar ahora
+                </Link>
+                
+              
         </div>
 
-        <div className="footer-nav">
-          <Link to="/">Inicio</Link>
-          <Link to="/talleres">Talleres</Link>
-          <Link to="/cursos">Cursos</Link>
-          <Link to="/formaciones">Formaciones</Link>
-        </div>
+        
 
         <div className="footer-contact">
           <p>Contacto: <a href="mailto:info@noimalab.com">info@noimalab.com</a></p>
           <div className="footer-icons">
-            <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
-            <a href="#" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a href="https://www.instagram.com/noima.lab/" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a href="#" className= "hidden" target="_blank" rel="noopener noreferrer"><FaFacebookF /></a>
+            <a href="#" className= "hidden" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
           </div>
         </div>
 

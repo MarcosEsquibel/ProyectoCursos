@@ -65,13 +65,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer>
-        <p>Únete a NoimaLab y empieza tu propio camino</p>
-        <Link to="/register" className="hero-button">
-          Empezar ahora
-        </Link>
-        
-      </footer>
+ 
     </div>
   );
 };
