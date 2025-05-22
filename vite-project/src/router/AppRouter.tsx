@@ -7,7 +7,7 @@ import Talleres from "../pages/Talleres";
 import Cursos from "../pages/Cursos";
 import Formaciones from "../pages/Formaciones"
 import comprapage from "../pages/Comprapage"
- 
+import Footer from "../pages/components/Footer";
 
    function AppRouter() {
   return (

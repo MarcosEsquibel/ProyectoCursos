@@ -11,6 +11,7 @@ import Cursos from "./pages/Cursos";
 import Formaciones from "./pages/Formaciones";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CompraPage from "./pages/Comprapage";
+import Footer from "./pages/components/Footer";
  
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ const App: React.FC = () => {
             <Route path="/talleres" element={<Talleres />} />
             <Route path="/cursos" element={<Cursos />} />
             <Route path="/formaciones" element={<Formaciones />} />
+            
             
 <Route path="/comprar" element={<CompraPage />} />
 

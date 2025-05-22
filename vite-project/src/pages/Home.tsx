@@ -16,7 +16,7 @@ const Home: React.FC = () => {
         <h2>¿Qué es NoimaLab?</h2>
         <div className="about-content">
           <p>
-            NoimaLab es un espacio online para quienes quieren transformar su vida desde dentro. Aquí te formas emocional, psicológica y vivencialmente, sin horarios ni tutorías. Tú marcas el ritmo, tú eliges el camino.
+            NoimaLab es un espacio online que ofrece Kavurey Group  para quienes quieren transformar su vida desde dentro. Aquí te formas emocional, psicológica y vivencialmente, sin horarios ni tutorías. Tú marcas el ritmo, tú eliges el camino.
           </p>
           <img
             src={psicologiapositiva2}
@@ -61,6 +61,7 @@ const Home: React.FC = () => {
         <h3>
           'Entender nuestro interior no es opcional, es esencial'
         </h3>
+      
       </section>
 
       {/* Footer */}

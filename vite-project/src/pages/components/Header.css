@@ -4,36 +4,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color:#fdf7d6;/* crema mate */
+  background-color: #fdf7d6; /* crema mate */
   padding: 1rem 2rem;
   flex-wrap: wrap;
+  position: relative;
+  z-index: 10;
+  
 }
 
-.logo {
-  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
-  font-weight: bold;
-  color: salmon;
-  margin: 0;
-  text-decoration: none;
-  line-height: 1.3;
-  white-space: normal;
-  word-break: break-word;
+/* --- Logo --- */
+.logo-container {
+  margin-right: 1rem;
 }
 
-.sub-logo {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
-  color: #111;
-  margin-top: 0.2rem;
-  white-space: nowrap;
+.NoimaLab {
+  height: 60px; /* base segura */
+  width: auto;
+  object-fit: contain;
+  transform: scale(1.6); /* escala visual sin empujar el layout */
+  transform-origin: left center; /* opcional: para mantener alineado a la izquierda */
 }
 
+
+/* --- Navegación --- */
 .header-nav {
   display: flex;
   gap: 1.5rem;
   margin-left: 2rem;
   flex-grow: 1;
   justify-content: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .header-nav ul {
@@ -76,9 +76,15 @@
   transform-origin: left;
 }
 
+/* --- Botón acceso --- */
+.user-access {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
 
-
-.access-button  {
+.access-button {
   background-color: #fff0e0;
   color: #fa8072;
   padding: 0.5rem 1rem;
@@ -86,13 +92,16 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: 600;
-}
- 
-button :hover{
-  background-color: #fff0e0;
-
+  transition: all 0.3s ease;
 }
 
+.access-button:hover {
+  background-color: #ffe4e1;
+  color: #d45d5d;
+  border-color: #d45d5d;
+}
+
+/* --- Dropdown de acceso (si lo usas) --- */
 .access-dropdown {
   position: absolute;
   top: 110%;
@@ -116,22 +125,67 @@ button :hover{
   background-color: #ffe4e1; /* rosa suave */
 }
 
-/* Responsive */
+/* --- Menú hamburguesa --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fa8072;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
     align-items: center;
     padding: 1rem;
-    gap: 1rem;  
+    gap: 1rem;
     text-align: center;
   }
 
-  .logo {
-    font-size: 1.5rem;
-    text-align: center;
-    white-space: normal;
-    word-break: break-word;
+  .logo-container {
     width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .NoimaLab {
+    height: 50px;
+  }
+
+  .hamburger {
+    display: flex;
+    align-self: flex-end;
+  }
+
+  .header-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fdfbf6;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    border-top: 1px solid #fa8072;
+    width: 100%;
+  }
+
+  .header-nav.active {
+    display: flex;
+  }
+
+  .header-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .user-access {
@@ -164,59 +218,4 @@ button :hover{
   .access-dropdown a:last-child {
     border-bottom: none;
   }
-
-  .hamburger {
-    align-self: flex-start;
-  }
-}
-/* --- Menú hamburguesa --- */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  margin-left: auto;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #fa8072;
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-/* Menú responsive */
-@media (max-width: 768px) {
-  .header-nav {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    
-    background-color: #fdfbf6;
-    margin-top: 1rem;
-    
-    padding: 1rem 0;
-    border-top: 1px solid #fa8072;
-  }
-
-  .header-nav.active {
-     display: inline-flex;
-  padding: 0.2rem 0.4rem; /* muy poco padding */
-  margin: 0; /* sin márgenes adicionales */
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
-  }
-
-  .header-nav ul {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-  }
-
-  .hamburger {
-    display:flex;
-  }
-
 }

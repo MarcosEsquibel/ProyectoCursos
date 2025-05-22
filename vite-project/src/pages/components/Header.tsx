@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
+import NoimaLab from "../../assets/images/NoimaLab.png"
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -41,9 +42,13 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       {/* Logo */}
+      
       <div className="logo-container">
-        <h1 className="logo">NoimaLab</h1>
-        <p className="sub-logo">by Kavurey Group</p>
+      <img 
+            src={NoimaLab}
+            alt="Ilustración de NoimaLab"
+            className="NoimaLab"
+          />
       </div>
 
       <div className="hamburger" onClick={toggleMenu}>

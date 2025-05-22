@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.noima-footer {
+  background-color: #fdf7d6; /* crema suave */
+  padding: 2rem 1rem;
+  color: #fa8072;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid #fa8072;
+  margin-top: 3rem;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.footer-brand .footer-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.footer-brand .footer-tagline {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.2rem;
+  margin-top: 0.3rem;
+  color: #555;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: #fa8072;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: #d45d5d;
+}
+
+.footer-contact {
+  font-size: 0.95rem;
+}
+
+.footer-contact a {
+  color: #fa8072;
+  text-decoration: none;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+.footer-icons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.footer-icons a {
+  font-size: 1.5rem;
+  color: #fa8072;
+  transition: color 0.3s ease;
+}
+
+.footer-icons a:hover {
+  color: #d45d5d;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #888;
+  margin-top: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .footer-icons {
+    gap: 0.8rem;
+  }
+}
