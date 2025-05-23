@@ -103,6 +103,17 @@
     cursor: pointer;
     justify-content: center;
     width: 100%;
+    position: relative;
+  }
+
+  .logo-container::after {
+    content: '☰'; /* Icono hamburguesa */
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: #fa8072;
   }
 
   .NoimaLab {
