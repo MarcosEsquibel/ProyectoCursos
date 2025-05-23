@@ -1,55 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
+/* Header base */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #fdf7d6; /* crema mate */
-  padding: 1rem 2rem;
+  background-color: #fff0e0;
+  padding: 0 2rem;
+  min-height: 70px;
   flex-wrap: wrap;
   position: relative;
   z-index: 10;
-  
 }
 
-/* --- Logo --- */
+/* Logo */
 .logo-container {
-  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  height: 70px;
 }
 
 .NoimaLab {
-  height: 60px; /* base segura */
+  height: 150px;
   width: auto;
   object-fit: contain;
-  transform: scale(1.6); /* escala visual sin empujar el layout */
-  transform-origin: left center; /* opcional: para mantener alineado a la izquierda */
 }
 
-
-/* --- Navegación --- */
+/* Navegación */
 .header-nav {
   display: flex;
+  align-items: center;
   gap: 1.5rem;
-  margin-left: 2rem;
-  flex-grow: 1;
-  justify-content: center;
-  transition: all 0.3s ease-in-out;
 }
 
 .header-nav ul {
-  display: flex;
   list-style: none;
+  display: flex;
+  gap: 1.5rem;
   margin: 0;
   padding: 0;
-  gap: 1.5rem;
 }
 
 .header-nav a {
+  position: relative;
   text-decoration: none;
   color: #fa8072;
   font-weight: 600;
   font-size: 1rem;
-  position: relative;
   padding: 0.3rem 0.5rem;
   transition: color 0.3s ease;
 }
@@ -67,8 +64,8 @@
   height: 2px;
   background-color: #fa8072;
   transform: scaleX(0);
-  transition: transform 0.3s ease;
   transform-origin: right;
+  transition: transform 0.3s ease;
 }
 
 .header-nav a:hover::after {
@@ -76,16 +73,15 @@
   transform-origin: left;
 }
 
-/* --- Botón acceso --- */
+/* Botón sesión */
 .user-access {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: auto;
+  height: 100%;
 }
 
 .access-button {
-  background-color: #fff0e0;
+  background-color: #fff;
   color: #fa8072;
   padding: 0.5rem 1rem;
   border: 1px solid #fa8072;
@@ -101,49 +97,18 @@
   border-color: #d45d5d;
 }
 
-/* --- Dropdown de acceso (si lo usas) --- */
-.access-dropdown {
-  position: absolute;
-  top: 110%;
-  right: 0;
-  background-color: white;
-  border: 1px solid #fa8072;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  min-width: 160px;
-  z-index: 100;
-}
-
-.access-dropdown a {
-  display: block;
-  padding: 0.5rem 1rem;
-  color: #333;
-  text-decoration: none;
-}
-
-.access-dropdown a:hover {
-  background-color: #ffe4e1; /* rosa suave */
-}
-
-/* --- Menú hamburguesa --- */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  margin-left: auto;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: #fa8072;
-  border-radius: 2px;
-  transition: 0.3s ease;
-}
-
-/* --- Responsive --- */
+/* Responsive */
 @media (max-width: 768px) {
+  .logo-container {
+    cursor: pointer;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .NoimaLab {
+    height: 150px;
+  }
+
   .header {
     flex-direction: column;
     align-items: center;
@@ -152,30 +117,17 @@
     text-align: center;
   }
 
-  .logo-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-
-  .NoimaLab {
-    height: 50px;
-  }
-
-  .hamburger {
-    display: flex;
-    align-self: flex-end;
-  }
-
   .header-nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff0e0;
     flex-direction: column;
     align-items: center;
-    background-color: #fdfbf6;
-    margin-top: 1rem;
     padding: 1rem 0;
-    border-top: 1px solid #fa8072;
-    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   .header-nav.active {
@@ -190,32 +142,7 @@
 
   .user-access {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .access-button {
-    width: auto;
-    max-width: 100%;
-  }
-
-  .access-dropdown {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    margin-top: 0.5rem;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-
-  .access-dropdown a {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #fa8072;
-  }
-
-  .access-dropdown a:last-child {
-    border-bottom: none;
+    justify-content: center;
+    margin-top: 1rem;
   }
 }
