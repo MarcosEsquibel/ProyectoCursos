@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
-/* Header base */
 .header {
   display: flex;
   align-items: center;
@@ -24,6 +23,23 @@
   height: 150px;
   width: auto;
   object-fit: contain;
+}
+
+/* Hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fa8072;
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* Navegación */
@@ -97,35 +113,34 @@
   border-color: #d45d5d;
 }
 
-/* Responsive */
+/* Visibilidad condicional */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: flex;
+}
+
+/* Móvil */
 @media (max-width: 768px) {
-  .logo-container {
-    cursor: pointer;
-    justify-content: center;
-    width: 100%;
-    position: relative;
+  .header {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
   }
 
-  .logo-container::after {
-    content: '☰'; /* Icono hamburguesa */
-    position: absolute;
-    right: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-    color: #fa8072;
+  .logo-container {
+    justify-content: flex-start;
+    width: auto;
   }
 
   .NoimaLab {
     height: 150px;
   }
 
-  .header {
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    gap: 1rem;
-    text-align: center;
+  .hamburger {
+    display: flex;
   }
 
   .header-nav {
@@ -155,5 +170,12 @@
     width: 100%;
     justify-content: center;
     margin-top: 1rem;
+  }
+
+  .mobile-only {
+    display: flex;
+  }
+  .desktop-only {
+    display: none;
   }
 }

@@ -1,4 +1,3 @@
-// src/pages/components/Header.tsx
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Header.css";
@@ -34,18 +33,16 @@ const Header: React.FC = () => {
 
   return (
     <header className="header">
-      {/* Logo (clickable en móvil) */}
-      <div
-        className="logo-container"
-        onClick={() => {
-          if (window.innerWidth <= 768) toggleMenu();
-        }}
-      >
-        <img
-          src={NoimaLab}
-          alt="Logo NoimaLab"
-          className="NoimaLab"
-        />
+      {/* Logo */}
+      <div className="logo-container">
+        <img src={NoimaLab} alt="Logo NoimaLab" className="NoimaLab" />
+      </div>
+
+      {/* Botón hamburguesa visible solo en móvil */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
       {/* Menú de navegación */}
@@ -56,11 +53,20 @@ const Header: React.FC = () => {
           <li><Link to="/cursos" onClick={closeMenu}>Cursos</Link></li>
           <li><Link to="/formaciones" onClick={closeMenu}>Formaciones</Link></li>
         </ul>
+
+        {/* Botón de sesión en móvil */}
+        {hasPurchased && (
+          <div className="user-access mobile-only">
+            <button className="access-button" onClick={handleButtonClick}>
+              {isLoggedIn ? "Cerrar sesión" : "Iniciar sesión"}
+            </button>
+          </div>
+        )}
       </nav>
 
-      {/* Botón de sesión */}
+      {/* Botón de sesión en escritorio */}
       {hasPurchased && (
-        <div className="user-access">
+        <div className="user-access desktop-only">
           <button className="access-button" onClick={handleButtonClick}>
             {isLoggedIn ? "Cerrar sesión" : "Iniciar sesión"}
           </button>
