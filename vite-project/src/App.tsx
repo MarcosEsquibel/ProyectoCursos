@@ -12,6 +12,7 @@ import Formaciones from "./pages/Formaciones";
 import ProtectedRoute from "./components/ProtectedRoute";
 import CompraPage from "./pages/Comprapage";
 import Footer from "./pages/components/Footer";
+import CookiesModal from "./pages/components/CookiesModal";
  
 const App: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -38,6 +39,7 @@ const App: React.FC = () => {
           </Routes>
         </main>
        <Footer/>
+       <CookiesModal/>
       </div>
     </Router>
   );

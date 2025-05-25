@@ -1,0 +1,51 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0; /* shorthand para top/left/right/bottom = 0 */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #fff0e0;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 90%;
+  width: 500px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  color: #333;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.modal-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.modal-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.modal-buttons .accept {
+  background-color: #fa8072;
+  color: #fff;
+}
+
+.modal-buttons .reject {
+  background-color: #fdf7d6;
+  color: #333;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

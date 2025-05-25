@@ -8,6 +8,7 @@ import Cursos from "../pages/Cursos";
 import Formaciones from "../pages/Formaciones"
 import comprapage from "../pages/Comprapage"
 import Footer from "../pages/components/Footer";
+import CookiesModal from "../pages/components/CookiesModal";
 
    function AppRouter() {
   return (
