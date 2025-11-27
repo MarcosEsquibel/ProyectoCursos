@@ -2,10 +2,12 @@
 
 import { userAdapter } from "../adapters/user.adapter";
 
+const API_URL = "http://localhost:8080"; // ⬅ tu backend
+
 export async function login(email: string, password: string) {
   const credentials = { email, password };
 
-  return fetch("/login", {
+  return fetch(`${API_URL}//api/auth/login`, {      // ⬅ CAMBIO AQUÍ
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -23,7 +25,7 @@ export async function register(name: string, email: string, password: string) {
   const user = { name, email, password };
   const adaptedUser = userAdapter(user, true);
 
-  return fetch("/register", {
+  return fetch(`${API_URL}/api/auth/register`, {   // ⬅ CAMBIO AQUÍ
     method: "POST",
     headers: {
       "Content-Type": "application/json",
