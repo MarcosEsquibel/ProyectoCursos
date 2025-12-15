@@ -1,13 +1,13 @@
-// src/services/auth.service.ts
-
+// src/pages/services/auth.service.ts
 import { userAdapter } from "../adapters/user.adapter";
 
-const API_URL = "http://localhost:8080"; // ⬅ tu backend
+// ❌ ELIMINA ESTA LÍNEA
+// const API_URL = "http://localhost:8080";
 
 export async function login(email: string, password: string) {
   const credentials = { email, password };
 
-  return fetch(`${API_URL}//api/auth/login`, {      // ⬅ CAMBIO AQUÍ
+  return fetch("/api/auth/login", {   // ✅ SOLO /api
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -21,11 +21,15 @@ export async function login(email: string, password: string) {
     .then((data) => userAdapter(data, false));
 }
 
-export async function register(name: string, email: string, password: string) {
+export async function register(
+  name: string,
+  email: string,
+  password: string
+) {
   const user = { name, email, password };
   const adaptedUser = userAdapter(user, true);
 
-  return fetch(`${API_URL}/api/auth/register`, {   // ⬅ CAMBIO AQUÍ
+  return fetch("/api/auth/register", {   // ✅ SOLO /api
     method: "POST",
     headers: {
       "Content-Type": "application/json",
